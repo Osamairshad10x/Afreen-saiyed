@@ -9,6 +9,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
+  <!-- ══ META PIXEL CODE ══ -->
+  <!-- CHANGE: Replace TUMHARA_PIXEL_ID with client's actual Pixel ID (2 places below) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'TUMHARA_PIXEL_ID');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=TUMHARA_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- ══ END META PIXEL CODE ══ -->
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -36,7 +56,6 @@
     .form-send-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,100,130,0.5); }
     .form-send-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
     .form-status { text-align: center; font-size: 12px; margin-top: 10px; min-height: 16px; color: #4ade80; }
-
     .hero { min-height: 100vh; background: linear-gradient(160deg, #0d0d1a 0%, #1a0a1e 40%, #0d0d1a 100%); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; padding: 16px 20px 48px; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,100,130,0.18) 0%, transparent 65%); top: -150px; left: 50%; transform: translateX(-50%); animation: orb1 7s ease-in-out infinite; pointer-events: none; }
     .hero::after { content: ''; position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(160,80,255,0.12) 0%, transparent 65%); bottom: -100px; right: -80px; animation: orb2 9s ease-in-out infinite; pointer-events: none; }
@@ -175,13 +194,13 @@
   </div>
 </div>
 
-<!-- FORM MODAL — hidden source field added -->
+<!-- FORM MODAL -->
 <div class="modal-overlay" id="formModal">
   <div class="form-box">
     <button class="modal-close" onclick="closeModal('formModal')">×</button>
     <div class="form-box-title">🚀 Start Your Journey</div>
+    <!-- CHANGE: Replace "Mantasha" with client name -->
     <div class="form-box-sub">Fill details — Mantasha will reach out within 24 hrs</div>
-    <!-- HIDDEN SOURCE FIELD — tracks which button was clicked -->
     <input type="hidden" id="formSource" value="" />
     <div class="fgroup">
       <label>Full Name *</label>
@@ -240,9 +259,11 @@
     <span class="coach-label">💫 Your Coach</span>
     <div class="coach-photo-ring">
       <div class="coach-photo-inner">
+        <!-- CHANGE: Replace with client photo URL -->
         <img src="https://i.ibb.co/5h5BBRkg/Whats-App-Image-2026-02-14-at-16-08-39.jpg" alt="Mantasha Khan"/>
       </div>
     </div>
+    <!-- CHANGE: Client name -->
     <h2 class="coach-name">Hi, I'm Mantasha Khan</h2>
     <div class="coach-roles">
       <div class="coach-role">✅ Entrepreneur</div>
@@ -253,11 +274,11 @@
       <div class="vision-title">🎯 My Vision:</div>
       <div class="vision-text">"Empower People to Empower Themselves"</div>
     </div>
-    <!-- Button 1: source = Connect Button -->
     <button class="wa-connect-btn sr" onclick="openFormModal('Connect Button')">
       📲 Connect on WhatsApp
     </button>
     <div class="stats-vertical sr">
+      <!-- CHANGE: data-target numbers -->
       <div class="stat-v-item"><div class="stat-v-left"><div class="stat-v-num counter" data-target="3" data-suffix="+">0+</div><div class="stat-v-lbl">Years of Experience</div></div><div class="stat-v-icon">⭐</div></div>
       <div class="stat-v-item"><div class="stat-v-left"><div class="stat-v-num counter" data-target="2000" data-suffix="+">0+</div><div class="stat-v-lbl">Students Helped</div></div><div class="stat-v-icon">👥</div></div>
       <div class="stat-v-item"><div class="stat-v-left"><div class="stat-v-num counter" data-target="100000" data-prefix="₹" data-format="full">₹0</div><div class="stat-v-lbl">Monthly Earning</div></div><div class="stat-v-icon">💰</div></div>
@@ -286,7 +307,6 @@
     <div class="benefit-card sr" style="transition-delay:.17s"><div class="benefit-step">4</div><div class="benefit-title">Start Earning</div><p class="benefit-desc">Begin from Week 1 confidently</p></div>
   </div>
   <div class="get-started-wrap sr">
-    <!-- Button 2: source = Get Started Button -->
     <button class="get-started-btn" onclick="openFormModal('Get Started Button')">📲 Get Started Now</button>
   </div>
 </section>
@@ -297,12 +317,14 @@
     <h2 class="section-title-main size-xl">Know Your <span class="highlight">Coach</span></h2>
   </div>
   <div class="coach-stats-vertical sr">
+    <!-- CHANGE: data-target numbers -->
     <div class="cs-v-item"><div><div class="cs-v-num counter" data-target="3" data-suffix="+">0+</div><div class="cs-v-lbl">Years of Experience</div></div><div class="cs-v-icon">⭐</div></div>
     <div class="cs-v-item"><div><div class="cs-v-num counter" data-target="1000" data-suffix="+">0+</div><div class="cs-v-lbl">Entrepreneurs Reached</div></div><div class="cs-v-icon">👥</div></div>
   </div>
   <div class="your-time-card sr">
     <div class="your-time-title">🔥 Now it's YOUR time</div>
     <div class="your-time-grid">
+      <!-- CHANGE: data-target numbers -->
       <div class="yt-stat"><div class="yt-num counter" data-target="1600000" data-prefix="₹" data-format="full">₹0</div><div class="yt-lbl">Earned by Students</div></div>
       <div class="yt-stat"><div class="yt-num counter" data-target="500" data-suffix="+">0+</div><div class="yt-lbl">Earning ₹50K–₹1L</div></div>
     </div>
@@ -339,10 +361,10 @@
         <div class="how-to-line"><strong>🎂 Age:</strong> Your Age</div>
         <div class="how-to-line"><strong>💼 Profession:</strong> Current Status</div>
       </div>
+      <!-- CHANGE: Client WhatsApp number -->
       <div class="wa-number-box">
         <span>📌 Save My Number: <strong>8299588589</strong></span>
       </div>
-      <!-- Button 3: source = Message Button -->
       <button class="wa-msg-btn" onclick="openFormModal('Message Button')">
         📲 Message on WhatsApp Now
       </button>
@@ -354,6 +376,7 @@
     </div>
     <div class="cta-right sr" style="transition-delay:.1s">
       <div class="cta-right-title">Stay Connected 📸</div>
+      <!-- CHANGE: Client Instagram username -->
       <a href="https://www.instagram.com/mantashakhan10x" target="_blank" rel="noopener"
          style="display:flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;font-size:14px;font-weight:700;padding:14px;border-radius:10px;text-decoration:none;transition:all 0.3s;margin-bottom:14px;"
          onmouseover="this.style.opacity='0.88';this.style.transform='translateY(-2px)'"
@@ -375,13 +398,31 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-tagline">🌟 Empower with skills • 🌈 Support every vision • 🚀 Dreams to direction</div>
+  <!-- CHANGE: Client name -->
   <div class="footer-sign">❤️ With Strength & Sincerity, Mantasha Khan</div>
   <div class="footer-powered">Powered by <strong>AdDestini</strong></div>
 </footer>
 
 <script>
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwEGUYVIeOXK226r5DmDxlOJ5_UKXewyQ1gCBYE9fMGoZNf5jO-IZJm3hpx7iWd7jhh/exec';
+  /* ══════════════════════════════════════
+     CHANGE THESE FOR EVERY NEW CLIENT
+  ══════════════════════════════════════ */
+  const SHEET_URL  = 'https://script.google.com/macros/s/AKfycbwEGUYVIeOXK226r5DmDxlOJ5_UKXewyQ1gCBYE9fMGoZNf5jO-IZJm3hpx7iWd7jhh/exec';
   const YOUTUBE_ID = 'ZScOhIsWRmo';
+  const WA_NUMBER  = '918299588589'; // 91 + 10 digit number
+
+  /* ══════════════════════════════════════
+     CHANGE: Client's testimonial images
+  ══════════════════════════════════════ */
+  const imgs = [
+    'https://i.ibb.co/9kkjVfR6/2-Arshiya.jpg',
+    'https://i.ibb.co/DgWh0QQk/3-Arshiya.jpg',
+    'https://i.ibb.co/zT3ckSmK/4-Arshiya.jpg',
+    'https://i.ibb.co/HTyvvz6K/5-Arshiya.jpg',
+    'https://i.ibb.co/9HKXcMGv/6-Arshiya.jpg'
+  ];
+
+  /* ══ DO NOT CHANGE BELOW THIS LINE ══ */
 
   if (YOUTUBE_ID) {
     document.getElementById('ytEmbed').innerHTML =
@@ -389,17 +430,13 @@
         title="Watch My Journey" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>`;
   }
 
-  /* ── MODALS ── */
   function openModal(id)  { document.getElementById(id).classList.add('active'); document.body.style.overflow='hidden'; }
   function closeModal(id) { document.getElementById(id).classList.remove('active'); document.body.style.overflow=''; }
-
-  /* ── openFormModal now accepts source parameter ── */
   function openFormModal(source) {
     clearForm();
     document.getElementById('formSource').value = source || 'Unknown';
     openModal('formModal');
   }
-
   document.querySelectorAll('.modal-overlay').forEach(o=>{
     o.addEventListener('click', function(e){ if(e.target===this) closeModal(this.id); });
   });
@@ -416,14 +453,13 @@
     this.value=this.value.replace(/\D/g,'').slice(0,10);
   });
 
-  /* ── FORM SUBMIT ── */
   async function submitForm() {
     const name   = document.getElementById('m-name').value.trim();
     const phone  = document.getElementById('m-phone').value.trim();
     const age    = document.getElementById('m-age').value.trim();
     const gender = document.getElementById('m-gender').value;
     const prof   = document.getElementById('m-profession').value;
-    const source = document.getElementById('formSource').value; // which button clicked
+    const source = document.getElementById('formSource').value;
 
     if (!name||!phone||!age||!gender||!prof) {
       document.getElementById('formStatus').style.color='#f87171';
@@ -437,21 +473,22 @@
     }
 
     const btn=document.getElementById('sendBtn');
-    btn.disabled=true;
-    btn.textContent='Opening...';
+    btn.disabled=true; btn.textContent='Opening...';
     document.getElementById('formStatus').textContent='';
 
-    // Save to Google Sheet with source
+    // Save to Google Sheet
     saveToSheet({ name, phone, age, gender, profession: prof, source });
+
+    // Fire Meta Pixel Lead event
+    if (typeof fbq !== 'undefined') fbq('track', 'Lead');
 
     const msg=`Hello Ma'am,\n\nI am interested in this Work. Here are my details:\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nProfession: ${prof}\n\nPlease share next steps. Thank you!`;
     setTimeout(()=>{
-      window.open(`https://wa.me/918299588589?text=${encodeURIComponent(msg)}`,'_blank');
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');
       setTimeout(()=>closeModal('formModal'),600);
     },600);
   }
 
-  /* ── GOOGLE SHEET SAVE — with source column ── */
   async function saveToSheet(data) {
     if(!SHEET_URL||SHEET_URL==='YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') return;
     const params = '?timestamp=' + encodeURIComponent(new Date().toLocaleString('en-IN'))
@@ -460,32 +497,25 @@
       + '&age='        + encodeURIComponent(data.age)
       + '&gender='     + encodeURIComponent(data.gender)
       + '&profession=' + encodeURIComponent(data.profession)
-      + '&source='     + encodeURIComponent(data.source); // source column
+      + '&source='     + encodeURIComponent(data.source);
     const url = SHEET_URL + params;
     try { await fetch(url,{method:'GET',mode:'no-cors'}); return; } catch(e){}
     try {
       await new Promise(resolve=>{
-        const img=new Image();
-        img.onload=img.onerror=resolve;
-        img.src=url;
-        setTimeout(resolve,3000);
+        const img=new Image(); img.onload=img.onerror=resolve; img.src=url; setTimeout(resolve,3000);
       });
     } catch(e){}
   }
 
-  /* ── TESTIMONIALS ── */
-  const imgs=['https://i.ibb.co/9kkjVfR6/2-Arshiya.jpg','https://i.ibb.co/DgWh0QQk/3-Arshiya.jpg','https://i.ibb.co/zT3ckSmK/4-Arshiya.jpg','https://i.ibb.co/HTyvvz6K/5-Arshiya.jpg','https://i.ibb.co/9HKXcMGv/6-Arshiya.jpg'];
   const row1=document.getElementById('row1');
   [...imgs,...imgs].forEach(src=>{ const d=document.createElement('div'); d.className='tcard'; d.innerHTML=`<img src="${src}" alt="Student" loading="lazy"/>`; row1.appendChild(d); });
 
-  /* ── FAQ ── */
   function toggleFaq(btn){
     const item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
     if(!isOpen) item.classList.add('open');
   }
 
-  /* ── HERO COUNT ── */
   function animateHeroCount(){
     const el=document.getElementById('heroCount');
     const target=10000,duration=1600,startTime=performance.now();
@@ -499,7 +529,6 @@
   }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',animateHeroCount); } else { animateHeroCount(); }
 
-  /* ── COUNTERS ── */
   function animateCounter(el){
     if(el.dataset.animated) return; el.dataset.animated='1';
     const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',prefix=el.dataset.prefix||'';
@@ -513,7 +542,6 @@
     requestAnimationFrame(tick);
   }
 
-  /* ── SCROLL REVEAL ── */
   const srObs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); e.target.querySelectorAll('.counter').forEach(animateCounter); srObs.unobserve(e.target); } });
   },{threshold:0.12});
